@@ -1,0 +1,45 @@
+package eva2_9_super_2;
+//Clase Derivada extens Clase Base
+//Subclase extends Superclase
+//Clase Padre Clase Hijo
+//Estudiante is a Persona 
+
+public class Estudiantes extends Persona {
+
+    private String noControl;
+    //HAY QUE INCLUIR EL CONSTRUCTOR DEFAULT
+
+    public Estudiantes() {
+        super();//LLAMADA AL CONSTRUCTOR DE LA SUPERCLASE
+        this.noControl = "-------";
+    }
+
+    public Estudiantes(String nombre, String apellido, int edad, String noControl) {
+        super(nombre, apellido, edad);
+        this.noControl = noControl;
+    }
+
+    public String getNoControl() {
+        return noControl;
+    }
+
+    public void setNoControl(String noControl) {
+        this.noControl = noControl;
+    }
+    //OVERRIDE: REEMPLAZA EL METODO (CON LA MISMA FIRMA) EN LA 
+    //SUPER CLASE, EN ESTE CASO, REEMPLAZA A imprimirDatos() de
+    //Persona
+    @Override
+    public void imprimirDatos() {
+       
+       
+        /*System.out.println("Datos: ");
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Apellidos: " + getApellido());
+        System.out.println("Edad: " + getEdad());*/
+        super.imprimirDatos();//PERSONA
+        System.out.println("No de Control: " + noControl);
+         
+    }
+
+}
